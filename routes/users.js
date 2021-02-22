@@ -27,9 +27,9 @@ router.get('/auth/google/secrets', useGoogleAuth);
 
 router.route('/login').get(getLoginPage).post(loginUser);
 
-router.route('/writeSecret').get(getWriteSecretPage);
+router.get('/writeSecret', getWriteSecretPage);
 
-router.route('/submitSecret').post(addSecretField);
+router.post('/submitSecret', addSecretField);
 
 router.get('/logout', logoutUser);
 
